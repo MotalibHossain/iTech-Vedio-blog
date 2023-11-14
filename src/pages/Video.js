@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+
 import VideoPlayer from "../components/description/Player";
 import VideoDescription from "../components/description/VideoDescription";
 import RelatedVideoList from "../components/list/RelatedVideoList";
 
-import {fetchVedios} from "../features/Videos/VideoSlice";
-
 export default function Video() {
-    const dispatch = useDispatch();
-    const { vedios, isLoading, isError, errorMessage } = useSelector((state) => state.vedios);
-
-    useEffect(() => {
-        dispatch(fetchVedios());
-    }, [dispatch]);
-
-    console.log("vedios-------------------", vedios, isLoading, isError, errorMessage);
     return (
         <section className="pt-6 pb-20">
             <div className="mx-auto max-w-7xl px-2 pb-20 min-h-[400px]">
