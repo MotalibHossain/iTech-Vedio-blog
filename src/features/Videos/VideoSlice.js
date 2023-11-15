@@ -15,9 +15,10 @@ const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const vedioUrl = `${SERVER_URL}/videos`;
 
 export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async () => {
-    const response = await axios.get("http://localhost:9000/videos");
+    const response = await axios.get(vedioUrl);
     return response?.data;
 });
+
 // -----------------------------------------
 // 	create slice
 // -----------------------------------------
@@ -33,13 +34,12 @@ const vedioFetchSlice = createSlice({
             .addCase(fetchVedios.fulfilled, (state, action) => {
                 state.isLoading = "False";
                 state.vedios = action.payload;
-                console.log("ok", SERVER_URL, vedioUrl);
+                console.log("ok", SERVER_URL);
             })
             .addCase(fetchVedios.rejected, (state, action) => {
                 state.isLoading = "False"
                 state.isError = "True";
                 state.errorMessage = action.payload;
-                console.log("rejected", action.payload);
             });
     }
 });

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { fetchVedios } from "../../features/Videos/VideoSlice";
+import { fetchTags } from "../../features/Tags/TagsSlice";
 
 export default function VideoGridItem() {
     const dispatch = useDispatch();
@@ -10,22 +11,20 @@ export default function VideoGridItem() {
         (state) => state.vedios
     );
 
+    
+
     useEffect(() => {
         dispatch(fetchVedios());
     }, [dispatch]);
 
-    console.log(
-        "vedios-------------------",
-        vedios,
-        isLoading,
-        isError,
-        errorMessage
-    );
+    
+
+    console.log( "vedios-------------------", vedios, isLoading, isError, errorMessage );
     return (
         <>
             {vedios &&
                 vedios.map((vedio, index) => {
-                    const {id, title, author, thumbnail}=vedio;
+                    const { id, title, author, thumbnail } = vedio;
                     return (
                         <div className="col-span-12 sm:col-span-6 md:col-span-3 duration-300 hover:scale-[1.03]">
                             <div key={index} className="w-full flex flex-col">
