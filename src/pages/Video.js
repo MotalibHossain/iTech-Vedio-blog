@@ -8,8 +8,7 @@ import React, { useState, useEffect } from "react";
 import { fetchVedios } from "../features/Videos/VideoSlice";
 
 export default function Video() {
-    const params = useParams();
-    const id = params.videoId;
+    const {videoId} = useParams();
     const dispatch = useDispatch();
 
     // All vedios data fetch
@@ -25,7 +24,7 @@ export default function Video() {
     useEffect(() => {
         if (vedios.length > 0) {
             const filterVedio = vedios.filter((item) => {
-                return item.id == id;
+                return item.id == videoId;
             });
 
             setVedio(filterVedio[0]);
@@ -42,7 +41,6 @@ export default function Video() {
 
                         <VideoDescription state={vedio}/>
                     </div>
-
                     <RelatedVideoList />
                 </div>
             </div>
