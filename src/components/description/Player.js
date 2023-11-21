@@ -5,7 +5,6 @@ export default function Player({state}) {
             className="aspect-video"
             src={state.link}
             title="Some video title"
-            frameBorder=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullscreen
         ></iframe>
