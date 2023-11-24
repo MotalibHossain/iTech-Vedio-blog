@@ -22,7 +22,6 @@ const relatedVediosSlice = createSlice({
                     return state;
                 }
             } else {
-                console.log("second");
                 state.relatedTags.push(action.payload);
             }
         },

@@ -15,7 +15,7 @@ export default function Tags() {
         dispatch(fetchTags());
     }, [dispatch]);
 
-    console.log("Tags-------------------", tags, isLoading, errorMessage);
+    // console.log("Tags-------------------", tags, isLoading, errorMessage);
 
     return (
         <>
@@ -25,7 +25,7 @@ export default function Tags() {
                         {tags &&
                             tags.map((tag, index) => {
                                 const { id, title } = tag;
-                                return <Tag title={title} />;
+                                return <Tag key={index} title={title} />;
                             })}
                     </div>
                 </section>
