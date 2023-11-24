@@ -1,9 +1,8 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     relatedTags: [],
-    search: ""
+    search: "",
 };
 
 // -----------------------------------------
@@ -15,9 +14,19 @@ const relatedVediosSlice = createSlice({
     initialState,
     reducers: {
         addTags: (state, action) => {
-            state.relatedTags.push(action.payload);
-        }
-    }
+            if (state.relatedTags.includes(action.payload)) {
+                const tagIndex = state.relatedTags.indexOf(action.payload);
+                if (tagIndex > -1) {
+                    state.relatedTags.splice(tagIndex, 1);
+                } else {
+                    return state;
+                }
+            } else {
+                console.log("second");
+                state.relatedTags.push(action.payload);
+            }
+        },
+    },
 });
 
 export const { addTags } = relatedVediosSlice.actions;
