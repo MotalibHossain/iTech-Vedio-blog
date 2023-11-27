@@ -13,6 +13,7 @@ const initialState = {
 // -----------------------------------------
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const vedioUrl = `${SERVER_URL}/videos`;
+console.log("vedioUrl", vedioUrl)
 
 export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async () => {
     const response = await axios.get(vedioUrl);
