@@ -15,7 +15,7 @@ export default function VideoGridItem() {
     }, [dispatch]);
 
     
-    console.log( "vedios-------------------", vedios, isLoading, isError, errorMessage );
+    // console.log( "vedios-------------------", vedios, isLoading, isError, errorMessage );
 
     return (
         <>
