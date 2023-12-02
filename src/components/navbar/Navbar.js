@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoImage from "../../assets/lws.svg";
+import logoImage from "../../assets/itecheys-logo-2.png";
 import searchImage from "../../assets/search.svg";
 import Search from "./Search";
 

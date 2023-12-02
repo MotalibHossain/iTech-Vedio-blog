@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
 import { fetchVedios } from "../../features/Videos/VideoSlice";
 
 export default function VideoGridItem() {
@@ -42,7 +41,7 @@ export default function VideoGridItem() {
                                 <div className="flex flex-row mt-2 gap-2">
                                     <Link to="/videos/1" className="shrink-0">
                                         <img
-                                            src="https://avatars.githubusercontent.com/u/73503432?v=4"
+                                           src="https://www.shareicon.net/data/512x512/2016/09/15/829459_man_512x512.png"
                                             className="rounded-full h-6 w-6"
                                             alt="Learn with Sumit"
                                         />
