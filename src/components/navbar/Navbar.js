@@ -9,7 +9,6 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
   { name: 'Projects', href: '#', current: false },
   { name: 'Calendar', href: '#', current: false },
@@ -24,7 +23,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-slate-100 shadow-md">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -53,8 +52,8 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current ? 'text-slate-700' : 'text-gray-800 hover:border-b-2 border-indigo-500/50',
+                          'px-3 py-6 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -64,8 +63,12 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <a href="#" class="bg-blue-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 space-x-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                
+                <a class="bg-indigo-500 text-white rounded-md px-3 py-2 text-sm font-medium rounded inline-flex items-center space-x-2">
+                  <svg class="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg>
+                  <span>Add New</span>
+                </a>
                 <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -158,28 +161,3 @@ export default function Navbar() {
   )
 }
 
-
-// export default function Navbar() {
-//     return (
-//         <nav className="bg-slate-100 shadow-md">
-//             <div className="max-w-7xl mx-auto px-5 lg:px-0 flex justify-between py-3">
-//                 <Link to="/">
-//                     <img
-//                         className="h-10"
-//                         src={logoImage}
-//                         alt="Learn with Sumit"
-//                     />
-//                 </Link>
-//                 <div className="border border-slate-200 flex items-center bg-white h-10 px-5 rounded-lg text-sm ring-emerald-200">
-//                     <Search />
-//                     <img
-//                         className="inline h-4 cursor-pointer"
-//                         src={searchImage}
-//                         alt="Search"
-//                     />
-//                 </div>
-//             </div>
-//         </nav>
-    
-//     );
-// }

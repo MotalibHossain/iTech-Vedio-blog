@@ -24,7 +24,7 @@ export default function Video() {
     useEffect(() => {
         if (vedios.length > 0) {
             const filterVedio = vedios.filter((item) => {
-                return item.id == videoId;
+                return item.id === videoId;
             });
 
             setVedio(filterVedio[0]);
