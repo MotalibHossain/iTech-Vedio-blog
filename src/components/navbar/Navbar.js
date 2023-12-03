@@ -37,10 +37,10 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="h-16 flex flex-1 items-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
+                    className="h-8 w-auto ml-11"
                     src={logoImage}
                     alt="iTechEys"
                   />
@@ -52,8 +52,8 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'text-slate-700' : 'text-gray-800 hover:border-b-2 border-indigo-500/50',
-                          'px-3 py-6 text-sm font-medium'
+                          item.current ? 'text-slate-700' : 'text-gray-800 hover:border-b-4 border-indigo-500/50',
+                          'px-3 py-5 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
