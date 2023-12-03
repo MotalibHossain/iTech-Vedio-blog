@@ -1,4 +1,5 @@
 export default function Player({state}) {
+    console.log("state-------", state)
     return (
         <iframe
             width="100%"
@@ -6,7 +7,7 @@ export default function Player({state}) {
             src={state.link}
             title="Some video title"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullscreen
+            allowFullScreen
         ></iframe>
     );
 }

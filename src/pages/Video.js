@@ -24,13 +24,15 @@ export default function Video() {
     useEffect(() => {
         if (vedios.length > 0) {
             const filterVedio = vedios.filter((item) => {
-                return item.id === videoId;
+                return item.id == videoId;
             });
 
             setVedio(filterVedio[0]);
         }
     }, [vedios]);
 
+    console.log("vedios********************", vedios)
+    console.log("vedio********************", vedio)
 
     return (
         <section className="pt-6 pb-20">
