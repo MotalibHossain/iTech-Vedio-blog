@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer className="relative bg-slate-100 shadow-md pt-8 pb-6">
-            <div className="container mx-auto px-4">
+            <div className="px-4">
                 <div className="flex flex-wrap text-left lg:text-left">
                     <div className="w-full lg:w-6/12 px-4">
                         <h4 className="text-3xl fonat-semibold text-blueGray-700">

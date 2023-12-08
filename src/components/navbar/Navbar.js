@@ -20,7 +20,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-slate-100 shadow-md">
+    <Disclosure as="nav" className="bg-slate-100 shadow-md max-xl:px-4">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl">
@@ -41,7 +41,7 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                 <Link to="/">
                   <img
-                    className="h-8 w-auto ml-11"
+                    className="h-8 w-auto max-sm:ml-11"
                     src={logoImage}
                     alt="iTechEys"
                   />
