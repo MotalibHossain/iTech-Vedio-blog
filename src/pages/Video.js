@@ -31,8 +31,8 @@ export default function Video() {
         }
     }, [vedios]);
 
-    console.log("vedios********************", vedios)
-    console.log("vedio********************", vedio)
+    // console.log("vedios********************", vedios)
+    // console.log("vedio********************", vedio)
 
     return (
         <section className="pt-6 pb-20">
