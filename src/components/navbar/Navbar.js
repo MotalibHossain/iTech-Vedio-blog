@@ -23,7 +23,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-slate-100 shadow-md max-xl:px-4">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl">
+          <div className="container mx-auto px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -67,10 +67,10 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 space-x-4 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 
-                <a className="bg-indigo-500 text-white cursor-pointer rounded-md px-3 py-2 text-sm font-medium rounded inline-flex items-center space-x-2">
+                <Link to='/add-vedio' className="bg-indigo-500 text-white cursor-pointer rounded-md px-3 py-2 text-sm font-medium rounded inline-flex items-center space-x-2">
                   <svg className="h-4 w-4 text-white"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg>
                   <span>Add New</span>
-                </a>
+                </Link>
                 <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

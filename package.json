@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "watch": "npx tailwindcss -i ./src/index.css -o ./src/App.css --watch",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

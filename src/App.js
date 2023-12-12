@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import Video from "./pages/Video";
+import AddVedio from './pages/AddVedio'
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/add-vedio" element={<AddVedio />} />
                 <Route path="/videos/:videoId" element={<Video />} />
             </Routes>
             <Footer />
