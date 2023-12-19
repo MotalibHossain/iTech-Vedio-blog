@@ -24,7 +24,12 @@ export default function AddVedio() {
                                     <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
                                     <input type="text" name="title" className="w-full h-full px-4 py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"/>
                                 </div>
+                                <div className="grid">
+                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
+                                    <input type="text" name="title" className="from-control"/>
+                                </div>
                             </div>
+                            <button className="btn-blue">Save</button>
                         </form>
                     </div>
                 </div>
