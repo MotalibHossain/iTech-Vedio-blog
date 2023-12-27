@@ -10,26 +10,23 @@ export default function AddVedio() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4">
                                 <div className="grid">
                                     <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
-                                    <input type="text" name="title" className="w-full h-full px-4 py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"/>
-                                </div>
-                                <div className="grid">
-                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
-                                    <input type="text" name="title" className="w-full h-full px-4 py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"/>
-                                </div>
-                                <div className="grid">
-                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
-                                    <input type="text" name="title" className="w-full h-full px-4 py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"/>
-                                </div>
-                                <div className="grid">
-                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
-                                    <input type="text" name="title" className="w-full h-full px-4 py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"/>
-                                </div>
-                                <div className="grid">
-                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
                                     <input type="text" name="title" className="from-control"/>
                                 </div>
+                                <div className="grid">
+                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Author</label>
+                                    <input type="text" name="author" className="from-control"/>
+                                </div>
+                                <div className="grid">
+                                    <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Tags</label>
+                                    <input type="text" name="tags" className="from-control"/>
+                                </div>
+                                
                             </div>
-                            <button className="btn-blue">Save</button>
+                            <div className="grid">
+                                <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Description</label>
+                                <textarea name="description" className="from-control grid grid-rows"/>
+                            </div>
+                            <button className="btn-blue mt-2">Save</button>
                         </form>
                     </div>
                 </div>
