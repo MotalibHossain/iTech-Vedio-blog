@@ -11,6 +11,5 @@
 		@apply ring-1 ring-inset ring-gray-300;
 		@apply focus:outline-none;
 		/* @apply focus:outline-none focus:ring focus:ring-indigo-200; */
-		@apply sm:max-w-md;
 	}
   }
