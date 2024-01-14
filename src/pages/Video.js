@@ -26,7 +26,7 @@ export default function Video() {
             const filterVedio = vedios.filter((item) => {
                 return item.id == videoId;
             });
-
+            
             setVedio(filterVedio[0]);
         }
     }, [vedios]);
