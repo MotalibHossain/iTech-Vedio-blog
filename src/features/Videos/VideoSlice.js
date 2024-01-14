@@ -15,8 +15,9 @@ const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const vedioUrl = `${SERVER_URL}/videos`;
 console.log("vedioUrl", vedioUrl)
 
-export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async () => {
+export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) => {
     const response = await axios.get(vedioUrl);
+    console.log("tags-------------", tags)
     return response?.data;
 });
 

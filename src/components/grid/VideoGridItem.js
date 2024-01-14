@@ -8,9 +8,12 @@ export default function VideoGridItem() {
     const { vedios, isLoading, isError, errorMessage } = useSelector(
         (state) => state.vedios
     );
+    const { tags } = useSelector(
+        (state) => state.tags
+    );
 
     useEffect(() => {
-        dispatch(fetchVedios());
+        dispatch(fetchVedios(tags));
     }, [dispatch]);
 
     
