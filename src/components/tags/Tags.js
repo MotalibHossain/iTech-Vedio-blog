@@ -35,7 +35,7 @@ export default function Tags() {
                             tags.map((tag, index) => {
                                 const { id, title } = tag;
                                 return (
-                                    <div onClick={()=>HandleClick(title)} className={`bg-blue-100 text-blue-600 px-4 py-1 rounded-full cursor-pointer ${relatedTags.includes(title)?'text-white bg-blue-700':''}`}>
+                                    <div key={index} onClick={()=>HandleClick(title)} className={`bg-blue-100 text-blue-600 px-4 py-1 rounded-full cursor-pointer ${relatedTags.includes(title)?'text-white bg-blue-700':''}`}>
                                         {title}
                                     </div>
                                 );

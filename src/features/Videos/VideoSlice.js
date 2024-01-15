@@ -22,11 +22,10 @@ export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) =
         let url=tags.join('&tags_like=')
         let requestURL= `${vedioUrl}?tags_like=${url}`
         response = await axios.get(requestURL);
-        console.log("_With tags-------------", requestURL)
     }else{
-        console.log("tags vedio slice-------------", tags)
         response = await axios.get(vedioUrl);
     }
+    console.log("response_vedioSlice", response)
     return response?.data;
 
 });
