@@ -1,5 +1,7 @@
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addTags } from "../../features/relatedVedios/relatedTagsSlice";
+import { fetchVedios } from "../../features/Videos/VideoSlice"
 
 export default function Tag({ title }) {
     const dispatch = useDispatch();
@@ -8,6 +10,10 @@ export default function Tag({ title }) {
     const HandleClick = (tag) => {
         dispatch(addTags(tag));
     };
+    useEffect(() => {
+        dispatch(fetchVedios(relatedTags));
+    }, [relatedTags]);
+
     console.log("relatedTags----------------", relatedTags);
 
     return (

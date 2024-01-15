@@ -16,9 +16,17 @@ const vedioUrl = `${SERVER_URL}/videos`;
 console.log("vedioUrl", vedioUrl)
 
 export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) => {
-    const response = await axios.get(vedioUrl);
-    console.log("tags-------------", tags)
+    let response; 
+
+    if(!tags.length === 0){
+        console.log("_With tags-------------", tags)
+    }else{
+        console.log("tags vedio slice-------------", tags)
+        response = await axios.get(vedioUrl);
+    }
+    console.log("response?.data", response?.data)
     return response?.data;
+
 });
 
 // -----------------------------------------

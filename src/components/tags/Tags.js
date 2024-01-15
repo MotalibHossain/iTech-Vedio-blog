@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { fetchTags } from "../../features/Tags/TagsSlice";
-
-import Tag from "./Tag";
+import { addTags } from "../../features/relatedVedios/relatedTagsSlice";
+import { fetchVedios } from "../../features/Videos/VideoSlice"
 
 export default function Tags() {
     const dispatch = useDispatch();
@@ -17,6 +17,15 @@ export default function Tags() {
 
     // console.log("Tags-------------------", tags, isLoading, errorMessage);
 
+    const { relatedTags } = useSelector((state) => state.relatedTags);
+
+    const HandleClick = (tag) => {
+        dispatch(addTags(tag));
+    };
+    useEffect(() => {
+        dispatch(fetchVedios(relatedTags));
+    }, [relatedTags]);
+
     return (
         <>
             {tags.length > 0 ? (
@@ -25,7 +34,11 @@ export default function Tags() {
                         {tags &&
                             tags.map((tag, index) => {
                                 const { id, title } = tag;
-                                return <Tag key={index} title={title} />;
+                                return (
+                                    <div onClick={()=>HandleClick(title)} className={`bg-blue-100 text-blue-600 px-4 py-1 rounded-full cursor-pointer ${relatedTags.includes(title)?'text-white bg-blue-700':''}`}>
+                                        {title}
+                                    </div>
+                                );
                             })}
                     </div>
                 </section>
