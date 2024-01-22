@@ -25,7 +25,6 @@ export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) =
     }else{
         response = await axios.get(vedioUrl);
     }
-    console.log("response_vedioSlice", response)
     return response?.data;
 
 });
