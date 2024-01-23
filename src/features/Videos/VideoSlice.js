@@ -16,8 +16,8 @@ const vedioUrl = `${SERVER_URL}/videos`;
 console.log("vedioUrl", vedioUrl)
 
 export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) => {
-    let response; 
-    
+    let response;
+      
     if(tags.length !== 0){
         let url=tags.join('&tags_like=')
         let requestURL= `${vedioUrl}?tags_like=${url}`
@@ -26,7 +26,6 @@ export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) =
         response = await axios.get(vedioUrl);
     }
     return response?.data;
-
 });
 
 // -----------------------------------------

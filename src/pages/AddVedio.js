@@ -25,9 +25,13 @@ export default function AddVedio() {
         )
     },[vedios])
 
-    console.log("vedios-----------", vedios)
-    console.log("author-----------", author)
 
+    // Get all value from form 
+    const [title, setTitle]=useState("")
+    const [write, setWrite]=useState("")
+    const [tag, setTag]=useState("")
+    const [description, setDescription]=useState("")
+    console.log()
 
     return (
         <>
@@ -38,11 +42,11 @@ export default function AddVedio() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-4">
                                 <div className="grid mb-2">
                                     <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Title</label>
-                                    <input type="text" name="title" className="from-control"/>
+                                    <input type="text" name="title" className="from-control" value={title} onChange={(e)=>setTitle(e.target.value)}/>
                                 </div>
                                 <div className="grid mb-2">
                                     <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Author</label>
-                                    <select name="author" className="from-control px-2" defaultValue="selected">
+                                    <select name="author" className="from-control px-2" value={write} onChange={(e)=>setWrite(e.target.value)}>
                                         <option className="p-4" value="selected" disabled>Selected</option>
                                         {author && author.map((item, index)=>{
                                             return (
@@ -57,14 +61,14 @@ export default function AddVedio() {
                                         <div className="w-3 h-3 -mt-2 rotate-45 bg-white"></div>
                                     </div>
                                     <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Tags</label>
-                                    <input type="text" name="tags" className="from-control"/>
+                                    <input type="text" name="tags" className="from-control" value={tag} onChange={(e)=>setTag(e.target.value)} />
                                 </div>
                             </div>
                             <div className="grid mb-2">
                                 <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900 mb-2">Description</label>
-                                <textarea name="description" className="from-control" rows="6" />
+                                <textarea name="description" className="from-control" rows="6" value={description} onChange={(e)=>setDescription(e.target.value)}/>
                             </div>
-                            <button className="btn-blue float-right mt-2">Save</button>
+                            <button type="submit" className="btn-blue float-right mt-2">Save</button>
                         </form>
                     </div>
                 </div>
@@ -72,3 +76,21 @@ export default function AddVedio() {
         </>
     );
 }
+
+
+
+// {
+//     "id": "",
+//     "title": "",
+//     "description": "",
+//     "author": "",
+//     "avatar": "",
+//     "date": "",
+//     "duration": "",
+//     "views": "",
+//     "link": "",
+//     "thumbnail": "",
+//     "tags": [],
+//     "likes": 0,
+//     "unlikes": 0
+//   }

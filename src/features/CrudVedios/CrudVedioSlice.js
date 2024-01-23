@@ -24,14 +24,14 @@ const crudVedioSlice = createSlice({
     initialState,
     extraReducers: (builder) => {
         builder
-            .addCase(fetchVedios.pending, (state, action) => {
+            .addCase(createVedios.pending, (state, action) => {
                 state.isLoading = "True";
             })
-            .addCase(fetchVedios.fulfilled, (state, action) => {
+            .addCase(createVedios.fulfilled, (state, action) => {
                 state.isLoading = "False";
                 state.vedios.push(action.payload);
             })
-            .addCase(fetchVedios.rejected, (state, action) => {
+            .addCase(createVedios.rejected, (state, action) => {
                 state.isLoading = "False"
                 state.isError = "True";
                 state.errorMessage = action.payload;
