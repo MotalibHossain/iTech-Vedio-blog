@@ -28,7 +28,8 @@ export default function AddVedio() {
     },[vedios])
 
 
-    // Get all value from form 
+    // Get all value from form
+    const [authorize, setAuthorize]=useState()
     const [title, setTitle]=useState("")
     const [write, setWrite]=useState("")
     const [tag, setTag]=useState("")
@@ -88,7 +89,10 @@ export default function AddVedio() {
                                 <textarea name="description" className="from-control" rows="6" value={description} onChange={(e)=>setDescription(e.target.value)} required/>
                             </div>
                         </form>
-                        <button onClick={CreateVedio} className="btn-blue float-right mt-2">Save</button>
+                        <div className="flex float-right">
+                            <input type="text" name="authorize" className="rounded-md mr-2 mt-2 p-2.5 ps-2" placeholder="Enter authorize code" value={authorize} onChange={(e)=>setAuthorize(e.target.value)} />
+                            <button onClick={CreateVedio} disabled={authorize === "motalib"?"true":false} className="btn-primary float-right mt-2">Save</button>
+                        </div>
                     </div>
                 </div>
             </section>
