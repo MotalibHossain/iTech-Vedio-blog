@@ -28,7 +28,7 @@ export default function AddVedio() {
 
 
     // Get all value from form
-    const [authorize, setAuthorize]=useState()
+    const [authorize, setAuthorize]=useState("")
     const [title, setTitle]=useState("")
     const [write, setWrite]=useState("")
     const [tag, setTag]=useState("")
@@ -44,7 +44,7 @@ export default function AddVedio() {
         "duration": "",
         "views": "",
         "link": "https://www.youtube.com/embed/crnMVpqJ3yc?si=fxjR_6f_pge5ZBtU",
-        "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+        "thumbnail": banner !== []? banner:"https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
         "tags": tag,
         "likes": 0,
         "unlikes": 0
@@ -52,6 +52,9 @@ export default function AddVedio() {
     const CreateVedio = () =>{
         dispatch(createVedios(vedio))
     }
+
+    // console.log("vedio----------", authorize === " " ? "false"  : "true", "ss")
+    // console.log("vedio----------", authorize === " " ? false : authorize === "motalib" ? false : true)
 
     return (
         <>
@@ -95,7 +98,7 @@ export default function AddVedio() {
                         </form>
                         <div className="flex float-right">
                             <input type="text" name="authorize" className="rounded-md mr-3.5 mt-2 p-2.5 ps-2" placeholder="Enter authorize code" value={authorize} onChange={(e)=>setAuthorize(e.target.value)} />
-                            <button onClick={CreateVedio} disabled={authorize === "motalib"?"true":false} className="btn-primary float-right mt-2">Save</button>
+                            <button onClick={CreateVedio} disabled={authorize === " " ? false : authorize === "motalib" ? false : true } className="btn-primary btn-blue float-right mt-2">Save</button>
                         </div>
                     </div>
                 </div>

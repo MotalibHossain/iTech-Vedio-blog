@@ -13,7 +13,7 @@ const initialState = {
 // -----------------------------------------
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const vedioUrl = `${SERVER_URL}/videos`;
-console.log("vedioUrl", vedioUrl)
+// console.log("vedioUrl", vedioUrl)
 
 export const fetchVedios = createAsyncThunk("vedios/fetchVedios", async (tags) => {
     let response;
@@ -43,7 +43,7 @@ const vedioFetchSlice = createSlice({
             .addCase(fetchVedios.fulfilled, (state, action) => {
                 state.isLoading = "False";
                 state.vedios = action.payload;
-                console.log("ok", SERVER_URL);
+                // console.log("ok", SERVER_URL);
             })
             .addCase(fetchVedios.rejected, (state, action) => {
                 state.isLoading = "False"

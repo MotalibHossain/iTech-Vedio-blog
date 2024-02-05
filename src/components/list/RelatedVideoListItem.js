@@ -6,7 +6,7 @@ export default function RelatedVideoListItem() {
             <div className="relative w-[168px] h-[94px] flex-none duration-300 hover:scale-[1.03]">
                 <Link to="/videos/1">
                     <img
-                        src="https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg"
+                        src="https://rb.gy/1ird4u"
                         className="object-cover"
                         alt="Some video title"
                     />
@@ -19,7 +19,7 @@ export default function RelatedVideoListItem() {
             <div clas="flex flex-col w-full">
                 <Link to="/videos/1">
                     <p className="text-slate-900 text-sm font-semibold">
-                        Some video title
+                    How to design a awesome GitHub profile readme in bangla-2021
                     </p>
                 </Link>
                 <Link
