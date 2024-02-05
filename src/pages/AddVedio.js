@@ -98,7 +98,7 @@ export default function AddVedio() {
                         </form>
                         <div className="flex float-right">
                             <input type="text" name="authorize" className="rounded-md mr-3.5 mt-2 p-2.5 ps-2" placeholder="Enter authorize code" value={authorize} onChange={(e)=>setAuthorize(e.target.value)} />
-                            <button onClick={CreateVedio} disabled={authorize === " " ? false : authorize === "motalib" ? false : true } className={`btn-primary btn-blue float-right mt-2 ${authorize === " " ? " " : authorize === "motalib" ? "" : "cursor-not-allowed" }`}>Save</button>
+                            <button onClick={CreateVedio}  className={`btn-primary btn-blue float-right mt-2 ${authorize === " " ? " " : authorize === "motalib" ? "" : "cursor-not-allowed" }`}>Save</button>
                         </div>
                     </div>
                 </div>
