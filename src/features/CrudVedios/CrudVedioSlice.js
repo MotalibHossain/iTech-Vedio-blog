@@ -15,7 +15,7 @@ const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const vedioUrl = `${SERVER_URL}/videos`;
 
 export const createVedios = createAsyncThunk("crudVedio/createVediosVedios", async (data) => {
-	response = await axios.post(vedioUrl, data);
+	const response = await axios.post(vedioUrl, data);
     return response?.data;
 });
 
