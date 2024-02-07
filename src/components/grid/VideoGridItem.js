@@ -12,7 +12,7 @@ export default function VideoGridItem() {
         (state) => state.tags
     );
     
-    if (vedios === []) {
+    if (vedios.length === 0) {
         setTimeout(() => {
             dispatch(fetchVedios(tags));
             console.log("vedios----------->", vedios)
