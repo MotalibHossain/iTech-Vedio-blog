@@ -11,6 +11,13 @@ export default function VideoGridItem() {
     const { tags } = useSelector(
         (state) => state.tags
     );
+    
+    if (vedios === []) {
+        setTimeout(() => {
+            dispatch(fetchVedios(tags));
+            console.log("vedios----------->", vedios)
+        }, 1000);
+    }
 
     useEffect(() => {
         dispatch(fetchVedios(tags));
