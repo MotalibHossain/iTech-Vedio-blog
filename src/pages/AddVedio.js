@@ -60,8 +60,8 @@ export default function AddVedio() {
     return (
         <>
             <section className="mb-8 mt-5">
-                <div className="container mx-auto">
-                    <div className="max-w-7xl p-6 mx-auto bg-slate-200 rounded-md shadow-md dark:bg-gray-800 overflow-hidden">
+                <div className="container mx-auto px-8">
+                    <div className="p-6 mx-auto bg-slate-200 rounded-md shadow-md dark:bg-gray-800 overflow-hidden">
                         <form>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
                                 <div className="grid mb-2">
