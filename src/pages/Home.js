@@ -4,10 +4,10 @@ import Pagination from "../components/ui/Pagination";
 
 export default function Home() {
     return (
-        <>
+        <div className="container mx-auto px-8">
             <Tags />
             <VideoGrid />
             <Pagination />
-        </>
+        </div>
     );
 }
