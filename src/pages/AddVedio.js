@@ -50,7 +50,8 @@ export default function AddVedio() {
         "unlikes": 0
       }
     const CreateVedio = () =>{
-        dispatch(createVedios(vedio))
+        const addvedio = dispatch(createVedios(vedio))
+        console.log("addvedio ========>", addvedio)
     }
 
     // console.log("vedio----------", authorize === " " ? "false"  : "true", "ss")

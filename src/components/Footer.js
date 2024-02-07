@@ -4,10 +4,20 @@ export default function Footer() {
             <div className="px-4">
                 <div className="flex flex-wrap text-left lg:text-left">
                     <div className="w-full lg:w-6/12 px-4">
-                        <h4 className="text-3xl fonat-semibold text-blueGray-700">
+                        <h4 className="text-5xl fonat-semibold text-blueGray-700 mb-4">
                             Let's keep in touch!
+                            {/* iTechEys Vedio Blog  */}
                         </h4>
-                        <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+                        {/* <div className="flex flex-shrink-0 items-center">
+                            <a href="/">
+                                <img className="h-8 w-auto max-sm:ml-11" src="/static/media/itecheys-logo-2.1ae1e2625dcc8324bec4.png" alt="iTechEys" />
+                            </a>
+                        </div> */}
+                        <h5 className="mt-0 mb-2 text-blueGray-400 text-justify">
+                        Our video blogging website is fully customizable and professional. 
+                        We used React and Tailwind for the front end, while Python, Django REST, and MySQL databases were used for the back end.
+                        </h5>
+                        <h5 className="text-xl fonat-semibold text-blueGray-500">
                             Find us on any of these platforms, we respond 1-2
                             business days.
                         </h5>
