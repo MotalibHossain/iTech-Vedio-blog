@@ -393,7 +393,7 @@ const Home = () => {
                                                 >
                                                     <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                                                 </svg>
-                                            </button>
+                                                  </button>
                                             <div
                                                 id="apple-imac-27-dropdown"
                                                 className="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -424,8 +424,8 @@ const Home = () => {
                                                                 />
                                                             </svg>
                                                             Edit
-                                                        </button>
-                                                    </li>
+                                                                    </button>
+                                                    </li>   
                                                     <li>
                                                         <button
                                                             type="button"
