@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { createBlogPost } from '../features/blogPostSlice';
 
 const Home = () => {
+    const dispatch = useDispatch();
+    const {post, isLoading, isError} = useSelector(
+        (state)=> state.post
+    )
+    console.log("Posts =", post, isError, isLoading)
+
+    useEffect(() => {
+        dispatch(createBlogPost());
+    }, [dispatch]);
+
+
+
     return (
         <main>
             <section className="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5 antialiased">
