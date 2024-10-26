@@ -7,17 +7,17 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": false,
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+        "editor.formatOnSave": false
+        // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
     },
-    "javascript.validate.enable": false, //disable all built-in syntax checking
+    // "javascript.validate.enable": false, //disable all built-in syntax checking
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit",
         "source.fixAll.tslint": "explicit",
         "source.organizeImports": "explicit"
     },
     "eslint.alwaysShowStatus": true,
-    "prettier.disableLanguages": ["javascript", "javascriptreact"],
+    // "prettier.disableLanguages": ["javascript", "javascriptreact"],
     // emmet
     "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {

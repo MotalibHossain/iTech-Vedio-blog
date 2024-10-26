@@ -27,7 +27,7 @@ const blogPostSlice = createSlice({
             })
             .addCase(createBlogPost.fulfilled, (state, action) => {
                 state.isLoading = "false";
-                state.post.push(action.payload);
+                state.post.push(...action.payload);
             })
             .addCase(createBlogPost.rejected, (state, action) => {
                 state.isError = action.payload;
