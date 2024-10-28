@@ -1,7 +1,7 @@
 import React from "react";
 
 const UpdateProductModal = (props) => {
-    const {index} = props
+    const { index, id, userId, title, body } = props;
     return (
         <div
             id={`updateProductModal-${index}`}
@@ -43,13 +43,29 @@ const UpdateProductModal = (props) => {
                                     htmlFor="name"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >
-                                    Name
+                                    ID
                                 </label>
                                 <input
                                     type="text"
-                                    name="name"
-                                    id="name"
-                                    defaultValue="iPad Air Gen 5th Wi-Fi"
+                                    name="id"
+                                    id="id"
+                                    defaultValue={id}
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    placeholder="Ex. Apple iMac 27&ldquo;"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="name"
+                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >
+                                    User ID
+                                </label>
+                                <input
+                                    type="text"
+                                    name="userId"
+                                    id="userId"
+                                    defaultValue={userId}
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     placeholder="Ex. Apple iMac 27&ldquo;"
                                 />
@@ -59,13 +75,13 @@ const UpdateProductModal = (props) => {
                                     htmlFor="brand"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >
-                                    Brand
+                                    Title
                                 </label>
                                 <input
                                     type="text"
-                                    name="brand"
-                                    id="brand"
-                                    defaultValue="Google"
+                                    name="title"
+                                    id="title"
+                                    defaultValue={title}
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                     placeholder="Ex. Apple"
                                 />
@@ -75,63 +91,16 @@ const UpdateProductModal = (props) => {
                                     htmlFor="price"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >
-                                    Price
-                                </label>
-                                <input
-                                    type="number"
-                                    defaultValue="399"
-                                    name="price"
-                                    id="price"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="$299"
-                                />
-                            </div>
-                            <div>
-                                <label
-                                    htmlFor="category"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
-                                    Category
-                                </label>
-                                {/* <select
-                                                                            id="category"
-                                                                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                                                        >
-                                                                            <option defaultValue="Selected">
-                                                                                Select a category
-                                                                            </option>
-                                                                            <option defaultValue="Electronics">
-                                                                                Electronics
-                                                                            </option>
-                                                                            <option defaultValue="TV">TV/Monitors</option>
-                                                                            <option defaultValue="PC">PC</option>
-                                                                            <option defaultValue="GA">
-                                                                                Gaming/Console
-                                                                            </option>
-                                                                            <option defaultValue="PH">Phones</option>
-                                                                        </select> */}
-                            </div>
-                            <div className="sm:col-span-2">
-                                <label
-                                    htmlFor="description"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                >
                                     Description
                                 </label>
-                                {/* <textarea
-                                                                            id="description"
-                                                                            rows="5"
-                                                                            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                                                            placeholder="Write a description..."
-                                                                        >
-                                                                            Standard glass, 3.8GHz 8-core
-                                                                            10th-generation Intel Core i7 processor,
-                                                                            Turbo Boost up to 5.0GHz, 16GB 2666MHz
-                                                                            DDR4 memory, Radeon Pro 5500 XT with 8GB
-                                                                            of GDDR6 memory, 256GB SSD storage,
-                                                                            Gigabit Ethernet, Magic Mouse 2, Magic
-                                                                            Keyboard - US
-                                                                        </textarea> */}
+                                <input
+                                    type="text"
+                                    defaultValue={body}
+                                    name="description"
+                                    id="Description"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    placeholder="Description"
+                                />
                             </div>
                         </div>
                         <div className="flex items-center space-x-4">
@@ -141,6 +110,7 @@ const UpdateProductModal = (props) => {
                             >
                                 Update product
                             </button>
+                            
                             <button
                                 type="button"
                                 className="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"

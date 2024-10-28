@@ -476,7 +476,13 @@ const Home = () => {
                                                         </div>
                                                     </td>
 
-                                                    <UpdateProductModal  index={index} />
+                                                    <UpdateProductModal
+                                                        index={index}
+                                                        id={id}
+                                                        userId={userId}
+                                                        title={title}
+                                                        body={body}
+                                                    />
                                                 </tr>
                                             );
                                         })}
