@@ -17,6 +17,12 @@ export const createBlogPost = createAsyncThunk("blogPost/createBlogPost", async 
     return response?.data;
 });
 
+export const UpdateBlogPost = createAsyncThunk("blogPost/UpdateBlogPost",  async (UpdatedData) =>{
+    const {updateURl, data} = UpdatedData
+    const response = await axios.put(updateURl, data);
+    return response?.data;
+})
+
 const blogPostSlice = createSlice({
     name: "blogPost",
     initialState,
@@ -30,6 +36,23 @@ const blogPostSlice = createSlice({
                 state.post.push(...action.payload);
             })
             .addCase(createBlogPost.rejected, (state, action) => {
+                state.isError = action.payload;
+            })
+
+            .addCase(UpdateBlogPost.pending, (state, action) => {
+                state.isLoading = "True";
+            })
+            .addCase(UpdateBlogPost.fulfilled, (state, action) => {
+                state.isLoading = "false";
+                const {id, data} = action.payload
+                const findIndex = state.post.findIndex((item)=> item.id === id)
+                console.log("Posts before update:", state.post);
+                if (findIndex !== -1) {
+                    state.post[findIndex] = data;
+                    console.log("update  data= ", state.post[findIndex], state.post)
+                } 
+            })
+            .addCase(UpdateBlogPost.rejected, (state, action) => {
                 state.isError = action.payload;
             });
     }

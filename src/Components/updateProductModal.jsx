@@ -1,14 +1,25 @@
 import { useFormik } from "formik";
 import PropTypes from "prop-types";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { UpdateBlogPost } from "../features/blogPostSlice";
 
 const UpdateProductModal = (props) => {
-    UpdateProductModal.PropTypes = {
-        index: PropTypes.number,
-        item: PropTypes.object
+    UpdateProductModal.propTypes = {
+        index: PropTypes.number.isRequired,
+        item: PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            userId: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            body: PropTypes.string.isRequired
+        }).isRequired
     };
-    const { index } = props;
-    const { id, userId, title, body } = props.item;
+    const dispatch = useDispatch();
+    const { index, item } = props;
+    const { id, userId, title, body } = item;
+
+    const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+    const updateURl = `${SERVER_URL}/${id}`;
 
     const EditFormData = useFormik({
         initialValues: {
@@ -21,7 +32,8 @@ const UpdateProductModal = (props) => {
             console.log("update value", values);
         },
         onSubmit: (values) => {
-            console.log("update value", values);
+            dispatch(UpdateBlogPost({ updateURl: updateURl, data: values }));
+            // console.log("update value", values);
         }
     });
 
