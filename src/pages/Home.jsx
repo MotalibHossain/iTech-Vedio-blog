@@ -475,19 +475,18 @@ const Home = () => {
                                                             </ul>
                                                         </div>
                                                     </td>
-
-                                                    <UpdateProductModal
-                                                        index={index}
-                                                        id={id}
-                                                        userId={userId}
-                                                        title={title}
-                                                        body={body}
-                                                    />
                                                 </tr>
                                             );
                                         })}
                                 </tbody>
                             </table>
+                            {post &&
+                                post.map((item, index) => {
+                                    <UpdateProductModal
+                                        index={index}
+                                        item={item}
+                                    />;
+                                })}
                         </div>
                         <nav
                             className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
