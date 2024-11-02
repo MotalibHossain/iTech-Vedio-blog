@@ -480,14 +480,18 @@ const Home = () => {
                                         })}
                                 </tbody>
                             </table>
-                            {post &&
-                                post.map((item, index) => {
-                                    <UpdateProductModal
-                                        index={index}
-                                        item={item}
-                                    />;
-                                })}
                         </div>
+                        {post &&
+                            post.map((item, index) => {
+                                return (
+                                    <React.Fragment key={index}>
+                                        <UpdateProductModal
+                                            index={index}
+                                            item={item}
+                                        />
+                                    </React.Fragment>
+                                );
+                            })}
                         <nav
                             className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
                             aria-label="Table navigation"
