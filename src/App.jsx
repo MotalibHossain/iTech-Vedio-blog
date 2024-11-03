@@ -5,6 +5,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import Home from '../src/pages/Home'
+import FormComponent from "./Components/FormComponent";
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    {/* <Route path="/blog/*" element={<BlogApp />} /> */}
+                    <Route path="/blog" element={<FormComponent />} />
                     {/* <Route path="/users/*" element={<UserApp />} /> */}
                 </Routes>
             </BrowserRouter>
